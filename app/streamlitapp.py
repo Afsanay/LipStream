@@ -28,8 +28,6 @@ if options:
         st.video(video_bytes)
 
     with col2:
-        path = bytes.decode(tf.convert_to_tensor(file_path).numpy())
-        st.text(path)
         video, annotations = load_data(tf.convert_to_tensor(file_path))
         st.info('This is the output of the machine learning model')
         model = load_model()
