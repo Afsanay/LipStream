@@ -21,7 +21,8 @@ if options:
     with col1:
         st.info('The video below is to be converted')
         file_path = os.path.join('./app','data', 's1', selected_video)
-        mp4_path = os.path.join('./app','mp4',selected_video)
+        file_name = selected_video.split('.')[0]
+        mp4_path = os.path.join('./app','mp4',f'{file_name}.mp4')
         video = open(mp4_path, 'rb')
         video_bytes = video.read()
         st.video(video_bytes)
