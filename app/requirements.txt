@@ -2,3 +2,4 @@ tensorflow
 streamlit
 opencv-python
 typing
+cv2
