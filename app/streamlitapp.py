@@ -22,7 +22,6 @@ if options:
         st.info('The video below is to be converted')
         file_path = os.path.join('./app','data', 's1', selected_video)
         os.system(f'ffmpeg -i {file_path} -vcodec libx264 test_video.mp4 -y')
-
         video = open('./app/test_video.mp4', 'rb')
         video_bytes = video.read()
         st.video(video_bytes)
