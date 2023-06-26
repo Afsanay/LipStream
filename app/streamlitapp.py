@@ -13,15 +13,14 @@ with st.sidebar:
     st.info("This application in developed for the people with hearing disability")
 
 st.title('LipNet Full Stack App')
-st.text(os.listdir('./app'))
-options = os.listdir(os.path.join('.','data', 's1'))
+options = os.listdir(os.path.join('./app','data', 's1'))
 selected_video = st.selectbox('Choose the video',options=options)
 col1, col2 = st.columns(2)
 
 if options:
     with col1:
         st.info('The video below is to be converted')
-        file_path = os.path.join( 'data', 's1', selected_video)
+        file_path = os.path.join('./app','data', 's1', selected_video)
         os.system(f'ffmpeg -i {file_path} -vcodec libx264 test_video.mp4 -y')
 
         video = open('test_video.mp4', 'rb')
