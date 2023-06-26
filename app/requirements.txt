@@ -1,5 +1,4 @@
 tensorflow
 streamlit
-opencv-python
+opencv-python-headless
 typing
-cv2
