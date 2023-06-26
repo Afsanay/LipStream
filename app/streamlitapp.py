@@ -12,7 +12,7 @@ with st.sidebar:
     st.info("This application in developed for the people with hearing disability")
 
 st.title('LipNet Full Stack App')
-options = os.listdir(os.path.join('data', 's1'))
+options = os.listdir(os.path.join('.','data', 's1'))
 selected_video = st.selectbox('Choose the video', options=options)
 
 col1, col2 = st.columns(2)
